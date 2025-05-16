@@ -2,8 +2,9 @@ from tests.data import AccountData, InvalidAccountData
 
 
 def test_create_account_with_all_required_fields(create_new_account):
+    data = AccountData()
     create_new_account.open_page()
-    create_new_account.fill_all_required_fields(AccountData)
+    create_new_account.fill_all_required_fields(data)
     create_new_account.check_message_of_successful_registration_is(
         "Thank you for registering with Main Website Store."
     )

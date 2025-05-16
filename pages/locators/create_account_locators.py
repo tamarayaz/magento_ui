@@ -1,6 +1,5 @@
 from selenium.webdriver.common.by import By
 
-
 firstname_field_loc = (By.ID, "firstname")
 lastname_field_loc = (By.ID, "lastname")
 email_field_loc = (By.ID, "email_address")
