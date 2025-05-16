@@ -1,7 +1,7 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from pages.base_page import BasePage
-from pages.locators import  create_account_locators as loc
+from pages.locators import create_account_locators as loc
 
 
 class CreateNewAccount(BasePage):
@@ -43,5 +43,3 @@ class CreateNewAccount(BasePage):
         error = self.find(loc.password_confirmation_error_loc)
 
         assert error.text == expected_message
-
-
