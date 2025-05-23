@@ -15,7 +15,7 @@ class EcoFriendlyPage(BasePage):
     def select_color_option(self, color_label):
         self.find(color_loc(color_label)).click()
 
-    def click_add_to_cart(self):
+    def click_add_selected_product_to_cart(self):
         self.find(loc.add_to_cart_btn_loc).click()
 
     def check_add_to_cart_success_message(self, expected_text):
