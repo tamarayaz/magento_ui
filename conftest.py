@@ -10,6 +10,7 @@ from pages.eco_friendly_page import EcoFriendlyPage
 def driver():
     options = Options()
     options.add_argument('--headless')
+    options.add_argument('window-size=1400,600')
     chrome_driver = webdriver.Chrome(options=options)
     return chrome_driver
 
