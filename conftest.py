@@ -1,5 +1,6 @@
 import pytest
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from pages.create_new_account import CreateNewAccount
 from pages.sale_page import SalePage
 from pages.eco_friendly_page import EcoFriendlyPage
@@ -7,7 +8,9 @@ from pages.eco_friendly_page import EcoFriendlyPage
 
 @pytest.fixture()
 def driver():
-    chrome_driver = webdriver.Chrome()
+    options = Options()
+    options.add_argument('--headless')
+    chrome_driver = webdriver.Chrome(options=options)
     return chrome_driver
 
 
