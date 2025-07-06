@@ -1,1 +1,19 @@
+name: Python autotests
 
+on: [push]
+
+jobs:
+  magento-run-tests:
+    runs-on: ubuntu-latest
+    name: Run Magento Autotests
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: run tests
+        run: pytest
