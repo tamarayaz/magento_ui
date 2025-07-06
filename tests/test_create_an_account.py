@@ -1,6 +1,8 @@
 from tests.data import AccountData, InvalidAccountData
+import pytest
 
 
+@pytest.mark.smoke
 def test_create_account_with_all_required_fields(create_new_account):
     data = AccountData()
     create_new_account.open_page()
@@ -10,12 +12,14 @@ def test_create_account_with_all_required_fields(create_new_account):
     )
 
 
+@pytest.mark.regression
 def test_create_account_with_empty_required_fields(create_new_account):
     create_new_account.open_page()
     create_new_account.click_create_account_button()
     create_new_account.check_required_field_errors_displayed(["This is a required field."])
 
 
+@pytest.mark.regression
 def test_error_message_displayed_for_password_mismatch(create_new_account):
     create_new_account.open_page()
     create_new_account.fill_all_required_fields(InvalidAccountData)

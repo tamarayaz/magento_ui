@@ -1,11 +1,14 @@
 from conftest import eco_friendly_page
+import pytest
 
 
+@pytest.mark.smoke
 def test_eco_friendly_page_title_is_correct(eco_friendly_page):
     eco_friendly_page.open_page()
     assert eco_friendly_page.get_title() == "Eco Friendly"
 
 
+@pytest.mark.smoke
 def test_add_product_to_cart_from_eco_friendly_page(eco_friendly_page):
     eco_friendly_page.open_page()
     eco_friendly_page.select_size_option(28)
@@ -14,6 +17,7 @@ def test_add_product_to_cart_from_eco_friendly_page(eco_friendly_page):
     eco_friendly_page.check_add_to_cart_success_message("You added Ana Running Short to your")
 
 
+@pytest.mark.regression
 def test_add_to_cart_requires_size_and_color_options(eco_friendly_page):
     eco_friendly_page.open_page()
     eco_friendly_page.hover_over_product()
