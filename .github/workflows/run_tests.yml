@@ -11,7 +11,7 @@ on:
         options:
           - smoke
           - regression
-          - extended
+          - navigation
           - all
 
 jobs:
