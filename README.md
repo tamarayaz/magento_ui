@@ -10,15 +10,15 @@ It covers core user flows of an e-commerce demo website using the Page Object Mo
 - Navigation between sale categories
 - Page titles and URLs validation
 
-## Test Scenarios
+## Test scenarios
 
-### Positive Scenarios
+### Positive scenarios
 - Successful account registration
 - Adding product to cart with selected options
 - Navigation to Women and Men deals pages
 - Sale page displays product items
 
-### Negative Scenarios
+### Negative scenarios
 - Empty required registration fields
 - Password mismatch validation
 - Attempt to add product without selecting required options
@@ -27,6 +27,19 @@ Tests are grouped using pytest markers:
 - `smoke`
 - `regression`
 - `navigation`
+
+## How to Run Tests
+
+```bash
+pip install -r requirements.txt
+pytest
+```
+Run specific test groups:
+```bash
+pytest -m smoke
+pytest -m regression
+pytest -m navigation
+```
 
 ## Tech Stack
 
