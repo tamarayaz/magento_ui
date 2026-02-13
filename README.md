@@ -28,7 +28,7 @@ Tests are grouped using pytest markers:
 - `regression`
 - `navigation`
 
-## How to Run Tests
+## How to run tests
 
 ```bash
 pip install -r requirements.txt
@@ -41,7 +41,7 @@ pytest -m regression
 pytest -m navigation
 ```
 
-## Tech Stack
+## Tech stack
 
 - Python
 - Selenium WebDriver
