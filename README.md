@@ -2,13 +2,21 @@
 This project is a UI test automation framework built with Python, Selenium, and Pytest.  
 It covers core user flows of an e-commerce demo website using the Page Object Model (POM) design pattern.
 
+## Project structure:
+- .github/workflows - CI configuration (GitHub Actions)
+- pages/ – Page Object classes
+- tests/ – test cases
+- gitignore
+- conftest.py – fixtures and setup
+- pytest.ini - pytest configuration
+- requirements.txt – dependencies
+
 ## What is tested
-- Account registration functionality
-- Form validation and error messages
-- Product selection (size & color)
+- User registration and validation
+- Product selection (size, color)
 - Add to cart functionality
-- Navigation between sale categories
-- Page titles and URLs validation
+- Navigation across sale categories
+- Page titles and URL validation
 
 ## Test scenarios
 
