@@ -4,12 +4,13 @@ It covers core user flows of an e-commerce demo website using the Page Object Mo
 
 ## Project structure:
 - .github/workflows - CI configuration (GitHub Actions)
-- pages/ – Page Object classes
-- tests/ – test cases
-- gitignore
-- conftest.py – fixtures and setup
+- pages/ - Page Object classes
+- tests/ - test cases
+- .gitignore
+- README.md
+- conftest.py - fixtures and setup
 - pytest.ini - pytest configuration
-- requirements.txt – dependencies
+- requirements.txt - dependencies
 
 ## What is tested
 - User registration and validation
